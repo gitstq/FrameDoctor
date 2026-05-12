@@ -1,0 +1,54 @@
+{
+  "name": "framedoctor",
+  "version": "1.0.0",
+  "description": "🏥 Multi-framework frontend code health diagnostic CLI tool — Vue, Svelte, Angular, React",
+  "type": "module",
+  "bin": {
+    "framedoctor": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./diagnose": "./dist/diagnose.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js",
+    "test": "node --test dist/tests/*.test.js",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "vue",
+    "svelte",
+    "angular",
+    "react",
+    "code-quality",
+    "lint",
+    "health-check",
+    "diagnostic",
+    "cli",
+    "frontend",
+    "framework",
+    "code-analysis"
+  ],
+  "author": "FrameDoctor Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "@types/node": "^20.11.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gitstq/FrameDoctor.git"
+  },
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ]
+}
